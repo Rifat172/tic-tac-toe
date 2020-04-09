@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using tic_tac_toe.forms;
+using tic_tac_toe.GameClasses;
 
 namespace tic_tac_toe.forms
 {

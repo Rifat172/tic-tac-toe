@@ -76,7 +76,8 @@
     <Compile Include="forms\settings.Designer.cs">
       <DependentUpon>settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Game.cs" />
+    <Compile Include="GameClasses\Game.cs" />
+    <Compile Include="GameClasses\Unit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="forms\field3.resx">
