@@ -28,7 +28,7 @@ namespace tic_tac_toe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            game.Play();
+            game.Start();
             this.Hide();
         }
     }

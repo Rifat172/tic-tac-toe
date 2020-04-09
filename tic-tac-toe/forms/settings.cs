@@ -22,8 +22,7 @@ namespace tic_tac_toe.forms
 
         private void settings_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form menu = Application.OpenForms[0];
-            menu.Show();
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)

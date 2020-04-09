@@ -32,7 +32,7 @@ namespace tic_tac_toe.GameClasses
             IsAI = Default;
         }
 
-        public void Play()
+        public void Start()
         {
             Form FieldForm;
             Init();
