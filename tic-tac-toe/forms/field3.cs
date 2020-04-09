@@ -23,7 +23,7 @@ namespace tic_tac_toe.forms
         private void restart_Click(object sender, EventArgs e)
         {
             var item = Controls.OfType<PictureBox>();
-            for(int i = 0, j = item.Count(); i < j; i++)
+            for (int i = 0, j = item.Count(); i < j; i++)
             {
                 var rem = item.First();
                 rem.Click -= new EventHandler(Field3_Click);
@@ -41,7 +41,7 @@ namespace tic_tac_toe.forms
                 for (int j = 0; j < _Game.FieldSize; j++)
                 {
                     pictureBoxes[i, j] = new PictureBox();
-                    pictureBoxes[i, j].Location = new System.Drawing.Point(11 + (105 * i),10 + (105 * j));
+                    pictureBoxes[i, j].Location = new System.Drawing.Point(11 + (105 * i), 10 + (105 * j));
                     pictureBoxes[i, j].Size = new System.Drawing.Size(100, 100);
                     pictureBoxes[i, j].Name = "p" + i + j;
                     pictureBoxes[i, j].Image = _Game.Units[i, j].Image;
@@ -53,7 +53,7 @@ namespace tic_tac_toe.forms
 
         private void Field3_Click(object sender, EventArgs e)
         {
-            ((PictureBox)sender).Image = Properties.Resources.cross_gray;
+            ((PictureBox)sender).Image = _Game.Move;
         }
 
         private void button1_Click(object sender, EventArgs e)

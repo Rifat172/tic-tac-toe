@@ -14,6 +14,7 @@ namespace tic_tac_toe.GameClasses
         private int fieldSize;
         private bool isAI;
         private Unit[,] units;
+        private Image move;
 
         public int FieldSize
         {
@@ -25,6 +26,7 @@ namespace tic_tac_toe.GameClasses
         }
         public bool IsAI { get => isAI; set => isAI = value; }
         public Unit[,] Units { get => units; set => units = value; }
+        public Image Move { get => move; set => move = value; }
 
         public Game(int FieldS, bool Default)
         {

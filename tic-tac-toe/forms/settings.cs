@@ -39,5 +39,15 @@ namespace tic_tac_toe.forms
         {
             GameFromSettings.FieldSize = 5;
         }
+
+        private void X_Click(object sender, EventArgs e)
+        {
+            GameFromSettings.Move = Properties.Resources.cross_gray;
+        }
+
+        private void O_Click(object sender, EventArgs e)
+        {
+            GameFromSettings.Move = Properties.Resources.toe_gray;
+        }
     }
 }
