@@ -11,7 +11,7 @@ namespace tic_tac_toe
         public menu()
         {
             InitializeComponent();
-            game = new Game(3, false);
+            game = new Game(3, false, Properties.Resources.cross_gray);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -28,6 +28,7 @@ namespace tic_tac_toe
 
         private void button1_Click(object sender, EventArgs e)
         {
+            game.Step = 0;
             game.Start();
             this.Hide();
         }

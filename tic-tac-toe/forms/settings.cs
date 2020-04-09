@@ -43,11 +43,13 @@ namespace tic_tac_toe.forms
         private void X_Click(object sender, EventArgs e)
         {
             GameFromSettings.Move = Properties.Resources.cross_gray;
+            GameFromSettings.IsFirstX = true;
         }
 
         private void O_Click(object sender, EventArgs e)
         {
             GameFromSettings.Move = Properties.Resources.toe_gray;
+            GameFromSettings.IsFirstX = false;
         }
     }
 }
