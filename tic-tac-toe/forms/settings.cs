@@ -35,7 +35,17 @@ namespace tic_tac_toe.forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            GameFromSettings.FieldSize = 3;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            GameFromSettings.FieldSize = 4;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GameFromSettings.FieldSize = 5;
         }
     }
 }

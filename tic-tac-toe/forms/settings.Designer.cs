@@ -142,6 +142,7 @@
             this.button3.TabIndex = 13;
             this.button3.Text = "5X5";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button8
             // 
@@ -152,6 +153,7 @@
             this.button8.TabIndex = 14;
             this.button8.Text = "4X4";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // settings
             // 

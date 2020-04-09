@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(682, 653);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Field5";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "5X5";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Field5_FormClosed);
             this.ResumeLayout(false);
