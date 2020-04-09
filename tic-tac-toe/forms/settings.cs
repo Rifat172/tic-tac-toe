@@ -13,9 +13,11 @@ namespace tic_tac_toe.forms
 {
     public partial class settings : Form
     {
-        public settings()
+        public Game GameFromSettings;
+        public settings(Game gameFromMenu)
         {
             InitializeComponent();
+            GameFromSettings = gameFromMenu;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -25,9 +27,15 @@ namespace tic_tac_toe.forms
             this.Hide();
         }
 
-        private void settings_FormClosing(object sender, FormClosingEventArgs e)
+        private void settings_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Form menu = Application.OpenForms[0];
+            menu.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

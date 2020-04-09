@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -38,32 +37,25 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(65, 44);
+            this.button1.Location = new System.Drawing.Point(65, 35);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 80);
+            this.button1.Size = new System.Drawing.Size(300, 59);
             this.button1.TabIndex = 1;
             this.button1.Text = "3X3";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(65, 130);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(300, 80);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "5X5";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(65, 375);
+            this.button4.Location = new System.Drawing.Point(65, 379);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 80);
             this.button4.TabIndex = 4;
@@ -73,7 +65,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(215, 375);
+            this.button5.Location = new System.Drawing.Point(215, 379);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(150, 80);
             this.button5.TabIndex = 5;
@@ -83,7 +75,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(65, 461);
+            this.button6.Location = new System.Drawing.Point(65, 465);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(300, 80);
             this.button6.TabIndex = 6;
@@ -97,24 +89,24 @@
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(61, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 23);
+            this.label1.Size = new System.Drawing.Size(126, 23);
             this.label1.TabIndex = 7;
-            this.label1.Text = "размер поля";
+            this.label1.Text = "Размер поля";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(61, 213);
+            this.label2.Location = new System.Drawing.Point(61, 226);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 23);
+            this.label2.Size = new System.Drawing.Size(139, 23);
             this.label2.TabIndex = 8;
-            this.label2.Text = "первые ходят";
+            this.label2.Text = "Первые ходят";
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial", 30F);
-            this.button2.Location = new System.Drawing.Point(215, 247);
+            this.button2.Location = new System.Drawing.Point(215, 260);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 80);
             this.button2.TabIndex = 10;
@@ -124,7 +116,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Arial", 30F);
-            this.button7.Location = new System.Drawing.Point(65, 247);
+            this.button7.Location = new System.Drawing.Point(65, 260);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(150, 80);
             this.button7.TabIndex = 9;
@@ -135,17 +127,39 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(61, 339);
+            this.label3.Location = new System.Drawing.Point(61, 343);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 23);
             this.label3.TabIndex = 11;
             this.label3.Text = "Играть против";
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(65, 164);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(300, 59);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "5X5";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button8.Location = new System.Drawing.Point(65, 99);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(300, 59);
+            this.button8.TabIndex = 14;
+            this.button8.Text = "4X4";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 559);
+            this.ClientSize = new System.Drawing.Size(432, 581);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button7);
@@ -154,13 +168,12 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Настройки";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.settings_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.settings_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,7 +182,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
@@ -178,5 +190,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button8;
     }
 }

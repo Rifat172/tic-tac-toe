@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\Field3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Field3.Designer.cs">
+      <DependentUpon>Field3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Field4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Field4.Designer.cs">
+      <DependentUpon>Field4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Field5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Field5.Designer.cs">
+      <DependentUpon>Field5.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,8 +76,18 @@
     <Compile Include="forms\settings.Designer.cs">
       <DependentUpon>settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\field3.resx">
+      <DependentUpon>Field3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Field4.resx">
+      <DependentUpon>Field4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Field5.resx">
+      <DependentUpon>Field5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
