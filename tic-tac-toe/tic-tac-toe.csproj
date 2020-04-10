@@ -64,19 +64,20 @@
     <Compile Include="forms\Field5.Designer.cs">
       <DependentUpon>Field5.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\menu.cs">
+    <Compile Include="forms\menuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\menu.Designer.cs">
-      <DependentUpon>menu.cs</DependentUpon>
+    <Compile Include="forms\menuForm.Designer.cs">
+      <DependentUpon>menuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\settings.cs">
+    <Compile Include="forms\settingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\settings.Designer.cs">
-      <DependentUpon>settings.cs</DependentUpon>
+    <Compile Include="forms\settingsForm.Designer.cs">
+      <DependentUpon>settingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GameClasses\Game.cs" />
+    <Compile Include="GameClasses\Settings.cs" />
     <Compile Include="GameClasses\Unit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,11 +90,11 @@
     <EmbeddedResource Include="forms\Field5.resx">
       <DependentUpon>Field5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\menu.resx">
-      <DependentUpon>menu.cs</DependentUpon>
+    <EmbeddedResource Include="forms\menuForm.resx">
+      <DependentUpon>menuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\settings.resx">
-      <DependentUpon>settings.cs</DependentUpon>
+    <EmbeddedResource Include="forms\settingsForm.resx">
+      <DependentUpon>settingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

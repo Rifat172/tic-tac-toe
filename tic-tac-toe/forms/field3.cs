@@ -26,7 +26,7 @@ namespace tic_tac_toe.forms
             for (int i = 0, j = item.Count(); i < j; i++)
             {
                 var rem = item.First();
-                rem.Click -= new EventHandler(Field3_Click);
+                rem.Click -= new EventHandler(thisImage_Click);
                 Controls.Remove(rem);
                 rem.Dispose();
             }
@@ -36,28 +36,28 @@ namespace tic_tac_toe.forms
 
         private void startWithGrayBG()
         {
-            PictureBox[,] pictureBoxes = new PictureBox[_Game.FieldSize, _Game.FieldSize];
-            for (int i = 0; i < _Game.FieldSize; i++)
+            PictureBox[,] pictureBoxes = new PictureBox[_Game.Settings.FieldSize, _Game.Settings.FieldSize];
+            for (int i = 0; i < _Game.Settings.FieldSize; i++)
             {
-                for (int j = 0; j < _Game.FieldSize; j++)
+                for (int j = 0; j < _Game.Settings.FieldSize; j++)
                 {
                     pictureBoxes[i, j] = new PictureBox();
                     pictureBoxes[i, j].Location = new System.Drawing.Point(11 + (105 * i), 10 + (105 * j));
                     pictureBoxes[i, j].Size = new System.Drawing.Size(100, 100);
                     pictureBoxes[i, j].Name = "p" + i + j;
                     pictureBoxes[i, j].Image = Properties.Resources.background_gray;
-                    pictureBoxes[i, j].Click += Field3_Click;
+                    pictureBoxes[i, j].Click += thisImage_Click;
                     Controls.Add(pictureBoxes[i, j]);
                 }
             }
         }
 
-        private void Field3_Click(object sender, EventArgs e)
+        private void thisImage_Click(object sender, EventArgs e)
         {
             _Game.Process((PictureBox)sender);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void backToMenu_Click(object sender, EventArgs e)
         {
             Form menu = Application.OpenForms[0];
             Hide();

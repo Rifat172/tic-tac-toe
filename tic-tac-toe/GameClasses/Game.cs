@@ -11,49 +11,31 @@ namespace tic_tac_toe.GameClasses
 {
     public class Game
     {
-        private int fieldSize;
-        private bool isAI;
+        private Settings settings;
         private Unit[,] units;
-        private Image move;
-        private int step;
-        private bool isFirstX;
-        private int countOfX;
-        private int countOfO;
+        private bool isNowStepX;
 
-        public int FieldSize
-        {
-            get => fieldSize; set
-            {
-                if (value >= 3 && value <= 5)
-                    fieldSize = value;
-            }
-        }
-        public bool IsAI { get => isAI; set => isAI = value; }
         public Unit[,] Units { get => units; set => units = value; }
-        public Image Move { get => move; set => move = value; }
-        public int Step { get => step; set => step = value; }
-        public bool IsFirstX { get => isFirstX; set => isFirstX = value; }
-        public int CountOfX { get => countOfX; set => countOfX = value; }
-        public int CountOfO { get => countOfO; set => countOfO = value; }
+        public Settings Settings { get => settings; set => settings = value; }
+        public bool IsNowStepX { get => isNowStepX; set => isNowStepX = value; }
 
-        public Game(int FieldS, bool Default, Image DefaultImageMove)
+        public Game()
         {
-            FieldSize = FieldS;
-            IsAI = Default;
-            Move = DefaultImageMove;
-            IsFirstX = true;
+            Settings = new Settings();
+            Settings.FieldSize = 3;
+            Settings.IsPlayerVsPlayer = true;
+            IsNowStepX = Settings.IsMoveX = true;
         }
 
         public void Start()
         {
-            step = 0;
             Form FieldForm;
             Init();
-            if (FieldSize == 3)
+            if (Settings.FieldSize == 3)
             {
                 FieldForm = new Field3(this);
             }
-            else if (FieldSize == 4)
+            else if (Settings.FieldSize == 4)
             {
                 FieldForm = new Field4(this);
             }
@@ -66,7 +48,11 @@ namespace tic_tac_toe.GameClasses
 
         public void ReStart()
         {
-            step = 0;
+            IsNowStepX = Settings.IsMoveX;
+            foreach(Unit item in Units)
+            {
+                item.State = State.background;
+            }
         }
 
         public void Process(PictureBox sender)
@@ -74,43 +60,32 @@ namespace tic_tac_toe.GameClasses
             PictureBox thisImage = sender;
             int x = thisImage.Name[1] - '0';
             int y = thisImage.Name[2] - '0';
+
             if (Units[x, y].State == State.background)
             {
-                if (step == 0)
-                {
-                    if (IsFirstX)
-                    {
-                        Units[x, y].State = State.cross;
-                        CountOfX++;
-                    }
-                    else
-                    {
-                        Units[x, y].State = State.toe;
-                        countOfO++;
-                    }
-                    Units[x, y].Image = Move;
-                }
-                else if (CountOfX > CountOfO)
-                {
-                    Units[x, y].State = State.toe;
-                    Units[x, y].Image = Properties.Resources.toe_gray;
-                }
-                else if (CountOfX < CountOfO)
+                if(IsNowStepX)
                 {
                     Units[x, y].State = State.cross;
                     Units[x, y].Image = Properties.Resources.cross_gray;
+                    IsNowStepX = false;
                 }
-                step++;
+                else
+                {
+                    Units[x, y].State = State.toe;
+                    Units[x, y].Image = Properties.Resources.toe_gray;
+                    IsNowStepX = true;
+                }
+
                 thisImage.Image = this.Units[x, y].Image;
             }
         }
 
         private void Init()
         {
-            Units = new Unit[FieldSize, FieldSize];
-            for (int i = 0; i < FieldSize; i++)
+            Units = new Unit[Settings.FieldSize, Settings.FieldSize];
+            for (int i = 0; i < Settings.FieldSize; i++)
             {
-                for (int j = 0; j < FieldSize; j++)
+                for (int j = 0; j < Settings.FieldSize; j++)
                 {
                     Units[i, j] = new Unit(i, j, Properties.Resources.background_gray);
                 }

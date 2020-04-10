@@ -35,10 +35,10 @@
             // restart
             // 
             this.restart.Font = new System.Drawing.Font("Arial", 15F);
-            this.restart.Location = new System.Drawing.Point(11, 333);
-            this.restart.Margin = new System.Windows.Forms.Padding(2);
+            this.restart.Location = new System.Drawing.Point(15, 410);
+            this.restart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.restart.Name = "restart";
-            this.restart.Size = new System.Drawing.Size(149, 52);
+            this.restart.Size = new System.Drawing.Size(199, 64);
             this.restart.TabIndex = 9;
             this.restart.Text = "ЗАНОВО";
             this.restart.UseVisualStyleBackColor = true;
@@ -47,24 +47,24 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 15F);
-            this.button1.Location = new System.Drawing.Point(164, 333);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(219, 410);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 52);
+            this.button1.Size = new System.Drawing.Size(212, 64);
             this.button1.TabIndex = 10;
             this.button1.Text = "В МЕНЮ";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.backToMenu_Click);
             // 
             // Field3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 396);
+            this.ClientSize = new System.Drawing.Size(445, 487);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.restart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Field3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3X3";
