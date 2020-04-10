@@ -6,11 +6,11 @@ namespace tic_tac_toe.forms
 {
     public partial class settingsForm : Form
     {
-        public Game Game;
-        public settingsForm(Game gameFromMenu)
+        public Settings Setting;
+        public settingsForm(Settings setting)
         {
             InitializeComponent();
-            Game = gameFromMenu;
+            Setting = setting;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -27,27 +27,27 @@ namespace tic_tac_toe.forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Game.Settings.FieldSize = 3;
+            Setting.FieldSize = 3;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Game.Settings.FieldSize = 4;
+            Setting.FieldSize = 4;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Game.Settings.FieldSize = 5;
+            Setting.FieldSize = 5;
         }
 
         private void X_Click(object sender, EventArgs e)
         {
-            Game.IsNowStepX = Game.Settings.IsMoveX = true;
+            Setting.IsMoveX = true;
         }
 
         private void O_Click(object sender, EventArgs e)
         {
-            Game.IsNowStepX = Game.Settings.IsMoveX = false;
+            Setting.IsMoveX = false;
         }
     }
 }

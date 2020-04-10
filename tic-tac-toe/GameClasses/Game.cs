@@ -19,18 +19,16 @@ namespace tic_tac_toe.GameClasses
         public Settings Settings { get => settings; set => settings = value; }
         public bool IsNowStepX { get => isNowStepX; set => isNowStepX = value; }
 
-        public Game()
+        public Game(Settings setting)
         {
-            Settings = new Settings();
-            Settings.FieldSize = 3;
-            Settings.IsPlayerVsPlayer = true;
-            IsNowStepX = Settings.IsMoveX = true;
+            Settings = setting;
         }
 
         public void Start()
         {
             Form FieldForm;
             Init();
+            IsNowStepX = Settings.IsMoveX;
             if (Settings.FieldSize == 3)
             {
                 FieldForm = new Field3(this);

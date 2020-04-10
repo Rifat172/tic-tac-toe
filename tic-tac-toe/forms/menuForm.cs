@@ -7,23 +7,24 @@ namespace tic_tac_toe
 {
     public partial class menu : Form
     {
-        public Settings settingsGame;
+        public Settings Setting;
 
         public menu()
         {
             InitializeComponent();
-            settingsGame = new Settings();
+            Setting = new Settings();
         }
 
         private void play_Click(object sender, EventArgs e)
         {
+            Game game = new Game(Setting);
             game.Start();
             this.Hide();
         }
 
         private void settings_Click(object sender, EventArgs e)
         {
-            Form setting = new settingsForm(game);
+            Form setting = new settingsForm(Setting);
             setting.Show();
             this.Hide();
         }
