@@ -44,7 +44,7 @@ namespace tic_tac_toe.forms
                     pictureBoxes[i, j] = new PictureBox();
                     pictureBoxes[i, j].Location = new System.Drawing.Point(11 + (105 * i), 10 + (105 * j));
                     pictureBoxes[i, j].Size = new System.Drawing.Size(100, 100);
-                    pictureBoxes[i, j].Name = "p" + i + j;
+                    pictureBoxes[i, j].Name = "p" + j + i;
                     pictureBoxes[i, j].Image = Properties.Resources.background_gray;
                     pictureBoxes[i, j].Click += thisImage_Click;
                     Controls.Add(pictureBoxes[i, j]);
@@ -65,8 +65,3 @@ namespace tic_tac_toe.forms
         }
     }
 }
-/*
- доделать
- обновление состояния State при нажатии кнопки заново
- смена шагом более чем два хода
-     */
