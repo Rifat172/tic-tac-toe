@@ -3,19 +3,11 @@ using tic_tac_toe.GameClasses;
 
 namespace tic_tac_toe.forms
 {
-    public partial class Field5 : Form
+    public partial class Field5 : Field3
     {
-        public Game gameFromField5;
-        public Field5(Game game)
+        public Field5(Game game) : base(game)
         {
             InitializeComponent();
-            gameFromField5 = game;
-        }
-
-        private void Field5_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Form menu = Application.OpenForms[0];
-            menu.Show();
         }
     }
 }

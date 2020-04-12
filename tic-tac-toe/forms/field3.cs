@@ -8,6 +8,10 @@ namespace tic_tac_toe.forms
     public partial class Field3 : Form
     {
         public Game _Game;
+        public PictureBox[,] pictureBoxes;
+
+        public Field3()
+        { }
         public Field3(Game game)
         {
             InitializeComponent();
@@ -15,12 +19,12 @@ namespace tic_tac_toe.forms
             startWithGrayBG();
         }
 
-        private void Field3_FormClosed(object sender, FormClosedEventArgs e)
+        protected void Field3_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        private void restart_Click(object sender, EventArgs e)
+        protected void restart_Click(object sender, EventArgs e)
         {
             var item = Controls.OfType<PictureBox>();
             for (int i = 0, j = item.Count(); i < j; i++)
@@ -34,9 +38,9 @@ namespace tic_tac_toe.forms
             _Game.ReStart();
         }
 
-        private void startWithGrayBG()
+        protected void startWithGrayBG()
         {
-            PictureBox[,] pictureBoxes = new PictureBox[_Game.Settings.FieldSize, _Game.Settings.FieldSize];
+            pictureBoxes = new PictureBox[_Game.Settings.FieldSize, _Game.Settings.FieldSize];
             for (int i = 0; i < _Game.Settings.FieldSize; i++)
             {
                 for (int j = 0; j < _Game.Settings.FieldSize; j++)
@@ -52,15 +56,15 @@ namespace tic_tac_toe.forms
             }
         }
 
-        private void thisImage_Click(object sender, EventArgs e)
+        protected void thisImage_Click(object sender, EventArgs e)
         {
             _Game.Process((PictureBox)sender);
         }
 
-        private void backToMenu_Click(object sender, EventArgs e)
+        protected void backToMenu_Click(object sender, EventArgs e)
         {
             Form menu = Application.OpenForms[0];
-            Hide();
+           // Hide();
             menu.Show();
         }
     }
