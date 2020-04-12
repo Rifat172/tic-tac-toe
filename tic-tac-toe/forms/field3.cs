@@ -64,7 +64,7 @@ namespace tic_tac_toe.forms
         protected void backToMenu_Click(object sender, EventArgs e)
         {
             Form menu = Application.OpenForms[0];
-           // Hide();
+            Hide();
             menu.Show();
         }
     }

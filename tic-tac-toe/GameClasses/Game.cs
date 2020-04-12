@@ -91,9 +91,28 @@ namespace tic_tac_toe.GameClasses
             {
                 int KeyWinner = CheckWinner();
                 if (KeyWinner == 1)
+                {
                     MessageBox.Show("Победитель X");
+                    FillUnitsWithState(State.finish);
+                }
                 else if (KeyWinner == 0)
+                {
                     MessageBox.Show("Победитель O");
+                    FillUnitsWithState(State.finish);
+                }
+            }
+            if(CountX + CountO == Settings.FieldSize*Settings.FieldSize)
+            {
+                MessageBox.Show("Ничья");
+                FillUnitsWithState(State.finish);
+            }
+        }
+
+        private void FillUnitsWithState(State _state)
+        {
+            foreach(var Unit in Units)
+            {
+                Unit.State = _state;
             }
         }
 
@@ -175,7 +194,7 @@ namespace tic_tac_toe.GameClasses
             {
                 for (int j = 0; j < Settings.FieldSize; j++)
                 {
-                    Units[i, j] = new Unit(i, j, Properties.Resources.background_gray);
+                    Units[i, j] = new Unit(Properties.Resources.background_gray);
                 }
             }
         }
